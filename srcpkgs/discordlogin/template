@@ -1,0 +1,14 @@
+# Template file for 'discordlogin'
+pkgname=discordlogin
+version=0.0.1
+revision=1
+build_style=go
+go_import_path=github.com/diamondburned/discordlogin/
+hostmakedepends="pkg-config"
+makedepends="webkit2gtk-devel"
+short_desc="Automated Discord token grabber, for use with gtkcord3"
+maintainer="Phosu Parsons <founderofjp@gmail.com>"
+license="GPL-3.0-only"
+homepage="https://github.com/diamondburned/discordlogin"
+distfiles="${homepage}/archive/v${version}.tar.gz"
+checksum=606f7e981e7e35b7b019229a26fc5495dde38518caec06fb75416eae97008b93
