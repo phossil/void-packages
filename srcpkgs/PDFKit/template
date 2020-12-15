@@ -1,0 +1,20 @@
+# Template file for 'PDFKit'
+pkgname=PDFKit
+version=1.0.1
+revision=1
+build_style=gnu-configure
+make_use_env=yes
+hostmakedepends="gnustep-make gcc-objc"
+makedepends="gnustep-base-devel gnustep-gui-devel freetype-devel"
+depends="gnustep-base gnustep-gui gnustep-back freetype"
+short_desc="xpdf-based PDF display Framework"
+maintainer="Phosu Parsons <founderofjp@gmail.com>"
+license="GPL-2.0-only"
+homepage="http://gap.nongnu.org/pdfkit/"
+distfiles="${NONGNU_SITE}/gap/${pkgname}-${version}.tar.gz"
+checksum=72fb1ba59c5eb97383b60a895507363deed5cd5ce53e4f411775f932d1f4c732
+nocross="objc doesn't get cross build at present within gcc (see gnustep-base)"
+
+if [ -e /usr/share/GNUstep/Makefiles/GNUstep.sh ]; then
+        . /usr/share/GNUstep/Makefiles/GNUstep.sh
+fi
