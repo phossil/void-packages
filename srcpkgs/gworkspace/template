@@ -1,0 +1,21 @@
+# Template file for 'gworkspace'
+pkgname=gworkspace
+version=0.9.4
+revision=1
+build_style=gnu-configure
+make_use_env=yes
+configure_args+=" --enable-gwmetadata --with-inotify"
+hostmakedepends="gnustep-make gcc-objc"
+makedepends="gnustep-base-devel gnustep-gui-devel sqlite-devel"
+depends="gnustep-base gnustep-gui gnustep-back freetype sqlite"
+short_desc="GNUstep workspace manager"
+maintainer="Phosu Parsons <founderofjp@gmail.com>"
+license="GPL-2.0-only"
+homepage="http://gnustep.org/experience/GWorkspace.html"
+distfiles="ftp://ftp.gnustep.org/pub/gnustep/usr-apps/${pkgname}-${version}.tar.gz"
+checksum=f3c18371c10d8ca02954017ce5c78d8f6b6ed3101a7adae86d7c557cea405632
+nocross="objc doesn't get cross build at present within gcc (see gnustep-base)"
+
+if [ -e /usr/share/GNUstep/Makefiles/GNUstep.sh ]; then
+        . /usr/share/GNUstep/Makefiles/GNUstep.sh
+fi
