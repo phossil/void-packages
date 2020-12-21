@@ -1,0 +1,16 @@
+# Template file for 'ProjectCenter'
+pkgname=ProjectCenter
+version=0.6.2
+revision=1
+build_style=gnu-makefile
+make_use_env=yes
+hostmakedepends="gnustep-make gcc-objc"
+makedepends="gnustep-base-devel gnustep-gui-devel"
+depends="gnustep-base gnustep-gui gnustep-back"
+short_desc="IDE for GNUstep"
+maintainer="Phosu Parsons <founderofjp@gmail.com>"
+license="GPL-2.0-only"
+homepage="http://www.gnustep.org/experience/ProjectCenter.html"
+distfiles="http://ftpmain.gnustep.org/pub/gnustep/dev-apps/${pkgname}-${version}.tar.gz"
+checksum=c5104ae18511260f900c6de6cca0bcf39361da1866499102bf2a90e2f05d9473
+nocross="objc doesn't get cross build at present within gcc (see gnustep-base)"
