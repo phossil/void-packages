@@ -1,0 +1,26 @@
+# Template file for 'libobjc2'
+pkgname=libobjc2
+version=2.1
+revision=1
+build_style=cmake
+hostmakedepends="clang gnustep-make-bootstrap"
+short_desc="Objective-C runtime library intended for use with Clang"
+maintainer="Phosu Parsons <founderofjp@gmail.com>"
+license="MIT"
+homepage="http://www.gnustep.org/"
+distfiles="https://github.com/gnustep/${pkgname}/archive/v${version}.tar.gz"
+checksum=78fc3711db14bf863040ae98f7bdca08f41623ebeaf7efaea7dd49a38b5f054c
+configure_args+=" -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DTESTS=FALSE -DCMAKE_BUILD_TYPE=Release"
+
+libobjc2-devel_package() {
+		depends="${pkgname}>=${version}"
+		short_desc+=" - development files"
+		pkg_install() {
+				vmove "usr/lib/libobjc2.*a"
+		}
+}
+
+post_install() {
+		make PREFIX=/usr DESTDIR="${DESTDIR}" copy-data
+		vlicense LICENSE
+}
