@@ -1,0 +1,17 @@
+# Template file for 'plugins-themes-Gtk'
+pkgname=plugins-themes-Gtk
+version=0
+revision=1
+wrksrc="${pkgname}-master"
+build_style=gnu-makefile
+make_use_env=yes
+hostmakedepends="gnustep-make gcc-objc"
+makedepends="gnustep-base-devel gnustep-gui-devel SystemPreferences gtk+-devel GConf-devel"
+depends="gnustep-base gnustep-gui gnustep-back SystemPreferences gtk+ GConf"
+short_desc="GTK theme for GNUstep"
+maintainer="Phosu Parsons <founderofjp@gmail.com>"
+license="LGPL-2.1-only"
+homepage="http://gnustep.org/"
+distfiles="https://github.com/gnustep/plugins-themes-Gtk/archive/master.tar.gz"
+checksum=b806b60d4d543f0d31f57c92e3153e1a747a0a8546bf786444c78e982939cd9e
+nocross="objc doesn't get cross build at present within gcc (see gnustep-base)"
