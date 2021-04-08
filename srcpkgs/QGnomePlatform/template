@@ -1,0 +1,12 @@
+# Template file for 'QGnomePlatform'
+pkgname=QGnomePlatform
+version=0.7.1
+revision=1
+build_style=qmake
+makedepends="gtk+3-devel qt5-wayland-devel adwaita-qt-devel"
+short_desc="QTPlatformTheme for better GNOME integration"
+maintainer="Phosu Parsons <founderofjp@gmail.com>"
+license="LGPL-2.1-or-later"
+homepage="https://github.com/FedoraQt/QGnomePlatform"
+distfiles="${homepage}/archive/refs/tags/${version}.tar.gz"
+checksum=f479ea5ca28108bc6b66e6790c35831d0e359b709db93f49d1b7015d25335eb9
